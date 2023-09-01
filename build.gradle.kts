@@ -9,20 +9,12 @@ buildscript {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin_version}")
         classpath("com.android.tools.build:gradle:7.1.3")
         classpath("org.jetbrains.dokka:dokka-gradle-plugin:${Versions.VERSION_DOKKA}")
-        //classpath("org.jetbrains.kotlin:kotlin-serialization:1.5.10")
-        classpath("com.tencent.vasdolly:plugin:3.0.4")
     }
 }
 
 allprojects {
     repositories {
         KtsHelper.injectProjectRepo(this) {
-        }
-    }
-
-    extra.apply {
-        if (!has("kmm.lct")) {
-            set("kmm.lct", "")
         }
     }
     group = property("GROUP").toString()
