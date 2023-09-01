@@ -1,0 +1,1 @@
+package com.fit.kmm.mmkvimport cocoapods.MMKV.MMKVactual fun initKMMKV(context: Any) {    MMKV.initialize()}

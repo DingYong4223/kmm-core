@@ -1,0 +1,1 @@
+package com.fit.kmm.mmkvexpect fun initKMMKV(context: Any)

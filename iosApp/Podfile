@@ -1,0 +1,30 @@
+inhibit_all_warnings!
+source 'https://github.com/CocoaPods/Specs.git'
+
+def shared_pods()
+# https://kotlinlang.org/docs/native-cocoapods.html#use-a-kotlin-gradle-project-as-a-cocoapods-dependency
+  use_frameworks!
+  use_modular_headers!
+  platform :ios, "12.0"
+
+  pod 'shared', :path => "../shared"
+
+  pod 'MMKV', '1.2.14'
+
+#   pod 'Alamofire', '~> 4.9'
+  pod 'KNetwork',  :git => "https://github.com/DingYong4223/KNetwork.git"#, :commit => "a6d505d3d877817447c9cf799f514bbba33185fa"
+end
+
+target 'iosApp' do
+    shared_pods()
+end
+
+post_install do |installer|
+    installer.generated_projects.each do |project|
+          project.targets.each do |target|
+              target.build_configurations.each do |config|
+                  config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
+               end
+          end
+   end
+end

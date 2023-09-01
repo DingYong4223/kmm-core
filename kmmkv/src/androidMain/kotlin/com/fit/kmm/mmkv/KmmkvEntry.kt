@@ -1,0 +1,1 @@
+package com.fit.kmm.mmkvimport android.content.Contextimport com.tencent.mmkv.MMKVactual fun initKMMKV(context: Any) {    MMKV.initialize(context as Context)}

@@ -1,0 +1,1 @@
+mmkv封装的数据本地存储接口用法：1、在程序初始化时调用initKMMKV(context)初始化组件2、val kv = KMMKV(fileName);   kv.putString("key", "value");

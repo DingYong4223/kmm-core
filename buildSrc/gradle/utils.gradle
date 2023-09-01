@@ -1,0 +1,28 @@
+ext {
+    executeCmd = this.&executeCmd
+    isReleaseBuildType = this.&isReleaseBuildType
+}
+
+def executeCmd(String cmd) {
+    def out = new ByteArrayOutputStream()
+    def isWindows = System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')
+    exec {
+        ExecSpec execSpec ->
+            executable isWindows ? 'cmd' : 'sh'
+            args isWindows ? '/c' : '-c', cmd
+            standardOutput = out
+    }
+    if (out.size() > 0) {
+        println("shell cmd result = " + out.toString())
+    }
+    return true
+}
+
+boolean isReleaseBuildType() {
+    for (String s : gradle.startParameter.taskNames) {
+        if (s.contains("Release") | s.contains("release")) {
+            return true
+        }
+    }
+    return false
+}

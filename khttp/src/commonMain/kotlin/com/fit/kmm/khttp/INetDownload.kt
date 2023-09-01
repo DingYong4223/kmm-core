@@ -1,0 +1,1 @@
+package com.fit.kmm.khttpinterface INetDownload {    fun back(retCode: Int, header: Map<String, List<String>>, body: ByteArray)}

@@ -1,0 +1,14 @@
+buildscript {
+
+    if (project.file('local.properties').exists()) {
+        Properties properties = new Properties()
+        properties.load(project.file('local.properties').newDataInputStream())
+        ext.publish_username = properties.get('publish_username', '')
+        ext.publish_token = properties.get('publish_token', '')
+        ext.MAVEN_REPO = properties.get('MAVEN_REPO', '')
+    } else {
+        ext.publish_username = ""
+        ext.publish_token    = ""
+        ext.MAVEN_REPO       = ""
+    }
+}
