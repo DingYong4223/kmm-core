@@ -17,6 +17,12 @@ allprojects {
         KtsHelper.injectProjectRepo(this) {
         }
     }
+
+    extra.apply {
+        if (!has("kmm.lct")) {
+            set("kmm.lct", "")
+        }
+    }
     group = property("GROUP").toString()
 }
 
