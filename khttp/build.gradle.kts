@@ -21,9 +21,6 @@ kotlin {
             summary = "Some description for the Shared Module"
             homepage = "Link to the Shared Module homepage"
             ios.deploymentTarget = Versions.VERSION_IOS_DEPLOYMENTTARGET
-//            pod("Alamofire", "~> 4.9")
-//            pod("KNetwork", path = File(project.rootDir,"/PodKmm/KNetwork"))
-//            pod("KNetwork", path = File("/Users/yongding/ProjDoing/tenpay/ThirdParty-IOS2KMM/KNetwork"))
             pod("KNetwork") {
                 this.source = PodLocation.Git(
                     URI(Const.URL_KNETWORK), null, null, null
