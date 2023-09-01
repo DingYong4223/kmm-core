@@ -1,9 +1,9 @@
 # kmm-core
 
-[![CI Status](https://img.shields.io/travis/delanding/KNetwork.svg?style=flat)](https://travis-ci.org/delanding/KNetwork)
-[![Version](https://img.shields.io/cocoapods/v/KNetwork.svg?style=flat)](https://cocoapods.org/pods/KNetwork)
-[![License](https://img.shields.io/cocoapods/l/KNetwork.svg?style=flat)](https://cocoapods.org/pods/KNetwork)
-[![Platform](https://img.shields.io/cocoapods/p/KNetwork.svg?style=flat)](https://cocoapods.org/pods/KNetwork)
+[![CI Status](https://img.shields.io/travis/delanding/KNetwork.svg?style=flat)](https://travis-ci.org/delanding/kmm-core)
+[![Version](https://img.shields.io/cocoapods/v/KNetwork.svg?style=flat)](https://cocoapods.org/pods/kmm-core)
+[![License](https://img.shields.io/cocoapods/l/KNetwork.svg?style=flat)](https://cocoapods.org/pods/kmm-core)
+[![Platform](https://img.shields.io/cocoapods/p/KNetwork.svg?style=flat)](https://cocoapods.org/pods/kmm-core)
 
 ## Example
 kutils：支持双端公用的基础组件和方法，如Base64编解码能力等
