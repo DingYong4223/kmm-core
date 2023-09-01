@@ -8,25 +8,6 @@ internal class StoreSubscriptionTests {
     var reducer = TestReducer()
     var store = Store(reducer::handleAction, TestAppState())
 
-    // this is not going to work in JVM.
-    // WeakReference also can't solve it since gc collects non-deterministically
-    // TODO: Discuss with ReSwift community for this inconsistency
-    /**
-     * It does not strongly capture an observer
-     */
-//    @Test
-//    fun testStrongCapture(){
-//        store = Store(reducer::handleAction, TestAppState())
-//        var subscriber: TestSubscriber? = TestSubscriber()
-//
-//        store.subscribe(subscriber!!)
-//        assertEquals(1, store.subscriptions.map { it.subscriber != null }.count())
-//
-//        @Suppress("UNUSED_VALUE")
-//        subscriber = null
-//        assertEquals(0, store.subscriptions.map { it.subscriber != null }.count())
-//    }
-
     /**
      * it removes subscribers before notifying state changes
      */
